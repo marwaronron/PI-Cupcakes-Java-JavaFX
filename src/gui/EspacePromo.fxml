@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anco" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EspacePromoController">
+   <children>
+      <Pane layoutX="-5.0" prefHeight="152.0" prefWidth="992.0" style="-fx-background-color: #DB7093;">
+         <children>
+            <Text fill="WHITE" layoutX="338.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 3.5em; -fx-font-weight: bold;" text="Bienvenue" />
+            <ImageView fx:id="acceuil" fitHeight="56.0" fitWidth="60.0" layoutX="14.0" layoutY="41.0" onMouseClicked="#Acceuil" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/ms3lines.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logout" fitHeight="67.0" fitWidth="60.0" layoutX="918.0" layoutY="43.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/mslogout.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Text fx:id="username" fill="#f2d7d7" layoutX="589.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="118.13671875" />
+      <AnchorPane layoutY="159.0" prefHeight="624.0" prefWidth="986.0">
+         <children>
+            <ImageView fitHeight="660.0" fitWidth="1004.0" layoutX="-3.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/msbackground1.jpg" />
+               </image>
+            </ImageView>
+          
+           
+            <ComboBox fx:id="produits" layoutX="305.0" layoutY="100.0" prefHeight="37.0" prefWidth="292.0" />
+            
+            <TextField fx:id="pourcentage" layoutX="305.0" layoutY="193.0" prefHeight="75.0" prefWidth="339.0" />
+              <Text layoutX="100.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit: "/>
+            <Text  layoutX="100.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pourcentage: " />
+             <Button fx:id="btn" layoutX="784.0" layoutY="531.0" mnemonicParsing="false" onAction="#addPromo" prefHeight="82.0" prefWidth="155.0" style="-fx-background-radius: 200; -fx-background-color: pink; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 1.8em;" text="Ajouter!">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

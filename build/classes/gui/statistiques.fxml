@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anco" prefHeight="930.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StatistiquesController">
+    
+    <children>
+      <SplitPane fx:id="Panel" prefHeight="930.0" prefWidth="217.0" style="-fx-background-color: #363030;">
+         <items>
+            <VBox prefHeight="928.0" prefWidth="242.0" style="-fx-background-color: #363030;">
+               <children>
+                  <VBox prefHeight="79.0" prefWidth="308.0" style="-fx-background-color: #363030;">
+                     <children>
+                        <ImageView fx:id="CHomePage" fitHeight="65.0" fitWidth="47.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="30.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../icons/ms3lines.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxAdminHome" onMouseClicked="#goToHome" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #9d4867;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Courier New; -fx-font-size: 1.5em;" text="Admin Panel">
+                           <VBox.margin>
+                              <Insets left="30.0" top="12.0" />
+                           </VBox.margin>
+                        </Text>
+                        <ImageView fitHeight="134.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/msadmin.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="30.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow color="#9d4867" height="53.34" radius="29.94" spread="0.24" width="68.42" />
+                     </effect>
+                  </VBox>
+                  <VBox fx:id="CBoxClients" onMouseClicked="#goToClients" prefHeight="50.0" prefWidth="323.0">
+                     <children>
+                        <Text fx:id="Cclients" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em;" text="Clients">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <opaqueInsets>
+                        <Insets top="15.0" />
+                     </opaqueInsets>
+                  </VBox>
+                  <VBox fx:id="CBoxResponsables" onMouseClicked="#goToResponsables" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Responsables">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxProuits" onMouseClicked="#goToProduits" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Produits">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxRecettes" onMouseClicked="#goToRecettes" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text fx:id="Crecettes" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Recettes">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxPrmotion" onMouseClicked="#goToPromotion" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Promotion">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxReclamation" onMouseClicked="#goToReclamation" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Réclamation">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxEvaluation" onMouseClicked="#goTostat" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Evaluation">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="CBoxPanier" onMouseClicked="#goTocommande" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.3em; -fx-fill: white;" text="Panier">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="61.0" fitWidth="79.0" onMouseClicked="#LogOut" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/mslogout.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="25.0" top="25.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow color="#111110" />
+               </effect>
+            </VBox>
+         </items>
+         <effect>
+            <DropShadow color="#9d4867" />
+         </effect>
+      </SplitPane>
+      <PieChart fx:id="piechart1" layoutX="256.0" layoutY="220.0" prefHeight="378.0" prefWidth="408.0" />
+      <Text fill="#eeb60d" layoutX="557.0" layoutY="64.0" stroke="#eb9010" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistiques " wrappingWidth="215.0">
+         <font>
+            <Font name="Times New Roman Bold" size="40.0" />
+         </font>
+      </Text>
+      <PieChart fx:id="piechart2" layoutX="737.0" layoutY="220.0" prefHeight="378.0" prefWidth="415.0" />
+      <Text fill="#e8a918" layoutX="397.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients-Commandes">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#f0b518" layoutX="953.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="top produits">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="288.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="biedeg ::">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="281.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="brice ::">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="biedeg" layoutX="374.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="brice" layoutX="374.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="775.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mille feuille ::">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="953.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tourte ::">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="771.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="croustina ::">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="951.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="biscuit ::">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="millefeuille" layoutX="899.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="tourte" layoutX="1031.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="croustina" layoutX="880.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="biscuit" layoutX="1031.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

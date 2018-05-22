@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfficheComandeController">
+   <children>
+      <TableView fx:id="liste" layoutX="40.0" layoutY="158.0" prefHeight="447.0" prefWidth="912.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="169.0" text="id" />
+          <TableColumn fx:id="date" prefWidth="211.0" text="date" />
+            <TableColumn fx:id="prixtotal" prefWidth="244.0" text="prix total" />
+            <TableColumn fx:id="user" prefWidth="287.0" text="utilisateur" />
+        </columns>
+      </TableView>
+      <Text fill="#e8ad0e" layoutX="300.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Commandes">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="recherche" layoutX="691.0" layoutY="104.0" prefHeight="25.0" prefWidth="151.0" promptText="rechercher" />
+      <JFXButton fx:id="details" layoutX="340.0" layoutY="630.0" text="details commande">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="rech" fitHeight="26.0" fitWidth="40.0" layoutX="852.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/msRecherche2.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="suppression" layoutX="155.0" layoutY="631.0" text="Supprimer commande">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
